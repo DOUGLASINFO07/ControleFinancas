@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1353.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladorFXML.FXMLPagarBoletoController">
+   <children>
+      <HBox alignment="CENTER" layoutX="-9.0" layoutY="667.0" prefHeight="43.0" prefWidth="1030.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="dataLB" prefHeight="43.0" prefWidth="488.0" text="Segunda feira , 05 Novembro 2018">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="horasLB" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="43.0" prefWidth="332.0" text="24:25:00">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="6.0" prefHeight="82.0" prefWidth="1030.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/financascontabilidade.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_CENTER" prefHeight="125.0" prefWidth="301.0" text="PAGAR BOLETOS" textAlignment="CENTER" textFill="#28a89b">
+               <font>
+                  <Font name="System Bold Italic" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/MARCA%20DIMTECH%20120_60.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="28.0" layoutY="138.0" prefHeight="428.0" prefWidth="1353.0" AnchorPane.bottomAnchor="162.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="138.0">
+         <children>
+            <Pane fx:id="formularioPane" prefHeight="461.0" prefWidth="397.0" HBox.hgrow="NEVER">
+               <children>
+                  <GridPane alignment="CENTER" prefHeight="419.0" prefWidth="396.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="29.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="240.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="103.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="19.0" minHeight="0.0" prefHeight="11.0" />
+                        <RowConstraints maxHeight="60.0" minHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="115.0" text="NOME EMPRESA" textAlignment="RIGHT" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="139.0" text="DATA VENCIMENTO" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="10">
+                           <image>
+                              <Image url="@../imagens/calendario.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@../imagens/fornecedores1.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                           <image>
+                              <Image url="@../imagens/meuCaixa.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="27.0" prefWidth="76.0" text="PARCELA" textAlignment="RIGHT" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="21.0" prefWidth="229.0" text="FORMA PAGAMENTO" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="11">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="12">
+                           <image>
+                              <Image url="@../imagens/cartao.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="fotoEmpresaIV" fitHeight="102.0" fitWidth="107.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <image>
+                              <Image url="@../imagens/semFoto.jpg" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="parcelaTF" editable="false" maxWidth="-Infinity" onKeyPressed="#parcelaTFTeclado" onMouseClicked="#parcelaTFMouse" prefHeight="25.0" prefWidth="85.0" style="-fx-text-inner-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <Button fx:id="pagarBT" alignment="CENTER" contentDisplay="BOTTOM" disable="true" mnemonicParsing="false" onKeyPressed="#pagarTeclado" onMouseClicked="#pagarMouse" prefHeight="64.0" prefWidth="72.0" text="PAGAR" textFill="#4a4949" GridPane.columnIndex="2" GridPane.rowIndex="19">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView cache="true" fitHeight="30.0" fitWidth="62.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                                 <image>
+                                    <Image url="@../imagens/icons8_Low_Price_48px.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="21.0" prefWidth="157.0" text="PRODUTO / SERVIÇO" textAlignment="RIGHT" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@../imagens/tutorial.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="valorBoletoTF" editable="false" maxWidth="-Infinity" onKeyPressed="#valorBoletoTFTeclado" onMouseClicked="#valorBoletoTFMouse" prefHeight="25.0" prefWidth="85.0" style="-fx-text-inner-color: blue;" text="0,0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="115.0" text="VALOR BOLETO" textAlignment="RIGHT" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                           <image>
+                              <Image url="@../imagens/icons8_Paper_Money_48px.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="21.0" prefWidth="152.0" text="DATA PAGAMENTO" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="13">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="21.0" prefWidth="154.0" text="VALOR PAGAMENTO" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="15">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="135.0" text="PAGADOR" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="19">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="22.0" prefWidth="153.0" text="LOCAL PAGAMENTO" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="17">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="10.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="20">
+                           <image>
+                              <Image url="@../imagens/icons8_Person_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="18">
+                           <image>
+                              <Image url="@../imagens/icons8_POS_Terminal_48px.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="nomeEmpresaTF" editable="false" maxWidth="-Infinity" onKeyPressed="#nomeEmpresaTFTeclado" onMouseClicked="#nomeEmpresaTFMouse" prefHeight="25.0" prefWidth="230.0" style="-fx-text-inner-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="produtoTF" editable="false" maxWidth="-Infinity" onKeyPressed="#produtoTFTeclado" onMouseClicked="#produtoTFMouse" prefHeight="25.0" prefWidth="230.0" style="-fx-text-inner-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="dataVencimentoTF" editable="false" maxWidth="-Infinity" onKeyPressed="#dataVencimentoTFTeclado" onMouseClicked="#dataVencimentoTFMouse" prefHeight="25.0" prefWidth="85.0" style="-fx-text-inner-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                        <TextField fx:id="formaPagamentoTF" editable="false" maxWidth="-Infinity" onKeyPressed="#formaPagamentoTFTeclado" onMouseClicked="#formaPagamentoTFMouse" prefHeight="25.0" prefWidth="230.0" style="-fx-text-inner-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                        <DatePicker fx:id="dataPagamentoDP" maxWidth="-Infinity" onKeyPressed="#dataPagamentoDPTeclado" onMouseClicked="#dataPagamentoDPMouse" prefHeight="25.0" prefWidth="114.0" style="-fx-text-inner-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                        <TextField fx:id="valorPagamentoTF" maxWidth="-Infinity" onKeyPressed="#valorPagamentoTFTeclado" onMouseClicked="#valorPagamentoTFMouse" prefHeight="25.0" prefWidth="85.0" style="-fx-text-inner-color: blue;" text="0,0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                        <ComboBox fx:id="localPagamentoCB" onKeyPressed="#localPagamentoCBTeclado" onMouseClicked="#localPagamentoCBMouse" prefWidth="230.0" promptText="Selecione" style="-fx-text-fill: blue;" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+                        <ComboBox fx:id="pagadorCB" onKeyPressed="#pagadorCBTeclado" onMouseClicked="#pagadorCBMouse" prefWidth="230.0" promptText="Selecione" style="-fx-text-inner-color: blue;" GridPane.columnIndex="1" GridPane.rowIndex="20" />
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="14">
+                           <image>
+                              <Image url="@../imagens/icons8_Calendar_48px.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="16">
+                           <image>
+                              <Image url="@../imagens/icons8_Cash_in_Hand_48px.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="115.0" text="EMPRESA" textAlignment="RIGHT" textFill="#545353" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fx:id="fotoUsuarioIV" fitHeight="102.0" fitWidth="107.0" pickOnBounds="true" GridPane.columnIndex="2" GridPane.rowIndex="13">
+                           <image>
+                              <Image url="@../imagens/semFoto.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="26.0" prefWidth="115.0" text="USUARIO PAGADOR" textAlignment="RIGHT" textFill="#545353" GridPane.columnIndex="2" GridPane.rowIndex="16">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="7.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Pane>
+            <Pane prefHeight="391.0" prefWidth="781.0">
+               <children>
+                  <TableView fx:id="tabelaPagarBoletoTV" layoutX="4.0" layoutY="39.0" onKeyPressed="#tabelaPagarBoletoTVTeclado" onMouseClicked="#tabelaPagarBoletoTVMouse" prefHeight="375.0" prefWidth="768.0">
+                     <columns>
+                        <TableColumn fx:id="colunaNomeEmpresa" prefWidth="169.0" text="EMPRESA" />
+                        <TableColumn fx:id="colunaProduto" prefWidth="159.0" text="PRODUTO" />
+                        <TableColumn fx:id="colunaValorBoleto" prefWidth="104.0" text="VALOR BOLETO" />
+                        <TableColumn fx:id="colunaParcela" minWidth="4.0" prefWidth="75.0" text="PARCELA" />
+                        <TableColumn fx:id="colunaVencimento" prefWidth="114.0" text="VENCIMENTO" />
+                        <TableColumn fx:id="colunaFormaPagamento" prefWidth="146.0" text="FORMA PAGTO" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="5.0" prefHeight="27.0" prefWidth="419.0" text="LISTA DE BOLETOS À PAGAR" textFill="#727070">
+                     <font>
+                        <Font name="System Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="imprimirBT" alignment="BOTTOM_LEFT" disable="true" layoutX="509.0" layoutY="4.0" mnemonicParsing="false" onKeyPressed="#imprimirBTTeclado" onMouseClicked="#imprimirBTMouse" prefHeight="30.0" prefWidth="110.0" text="IMPRIMIR" textFill="#4a4949">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="62.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../imagens/icons8_PDF_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="listarTabelaBT" alignment="TOP_LEFT" layoutX="407.0" layoutY="4.0" mnemonicParsing="false" onKeyPressed="#listarTabelaBTTeclado" onMouseClicked="#listarTabelaBTMouse" prefHeight="32.0" prefWidth="88.0" text="LISTAR" textFill="#535452">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="62.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../imagens/lista.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="boletosPagosBT" alignment="BOTTOM_LEFT" layoutX="630.0" layoutY="4.0" mnemonicParsing="false" onKeyPressed="#boletosPagosBTTeclado" onMouseClicked="#boletosPagosBTMouse" prefHeight="30.0" prefWidth="142.0" text="BOLETOS PAGOS" textFill="#4a4949">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="62.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                           <image>
+                              <Image url="@../imagens/cadastro.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="-10.0" layoutY="109.0" prefHeight="25.0" prefWidth="1059.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" layoutY="597.0" prefHeight="39.0" prefWidth="1030.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Button fx:id="voltarMenuBT" alignment="BASELINE_LEFT" mnemonicParsing="false" onKeyPressed="#voltarMenuBTTeclado" onMouseClicked="#voltarMenuBTMouse" prefHeight="39.0" prefWidth="141.0" text="VOLTAR MENU" textFill="#4a4949">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <graphic>
+                  <ImageView blendMode="MULTIPLY" fitHeight="33.0" fitWidth="30.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/voltar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+      <HBox layoutX="-5.0" layoutY="567.0" prefHeight="25.0" prefWidth="812.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox layoutX="1.0" layoutY="642.0" prefHeight="25.0" prefWidth="1030.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox layoutX="8.0" layoutY="713.0" prefHeight="15.0" prefWidth="1030.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="16.0" prefHeight="82.0" prefWidth="1030.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="TOP_LEFT" prefHeight="82.0" prefWidth="313.0" text="CONTROLE DE FINANÇAS" textAlignment="CENTER" textFill="#26aeac">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

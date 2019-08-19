@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="RelatorioContasMesAtual" language="groovy" pageWidth="802" pageHeight="555" orientation="Landscape" columnWidth="802" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="4fc4369c-1a54-488d-8426-537066321297">
+	<property name="ireport.zoom" value="1.0000000000000002"/>
+	<property name="ireport.x" value="98"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString>
+		<![CDATA[SELECT
+     boleto.`empresaBoleto` AS boleto_empresaBoleto,
+     boleto.`produtoBoleto` AS boleto_produtoBoleto,
+     boleto.`valorBoleto` AS boleto_valorBoleto,
+     boleto.`vencimentoBoleto` AS boleto_vencimentoBoleto,
+     boleto.`parcelaBoleto` AS boleto_parcelaBoleto,
+     boleto.`formaPagamentoBoleto` AS boleto_formaPagamentoBoleto
+FROM
+     `boleto` boleto
+WHERE
+     valorPagoBoleto IS NULL
+ORDER BY
+	VencimentoBoleto
+ASC]]>
+	</queryString>
+	<field name="boleto_empresaBoleto" class="java.lang.String"/>
+	<field name="boleto_produtoBoleto" class="java.lang.String"/>
+	<field name="boleto_valorBoleto" class="java.lang.Double"/>
+	<field name="boleto_vencimentoBoleto" class="java.sql.Date"/>
+	<field name="boleto_parcelaBoleto" class="java.lang.String"/>
+	<field name="boleto_formaPagamentoBoleto" class="java.lang.String"/>
+	<variable name="PAGARSOMA" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{boleto_valorBoleto}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="86" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="802" height="68" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="735f6631-128b-41b8-9da5-acc04428af29"/>
+				<staticText>
+					<reportElement style="Title" x="0" y="0" width="635" height="35" forecolor="#999900" uuid="a31d904c-52b6-421f-8b37-5c9a0d76d096"/>
+					<textElement textAlignment="Center">
+						<font size="24" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CONTROLE DE FINANÇAS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="2" y="37" width="633" height="29" forecolor="#999999" uuid="6d321021-88d9-4262-9139-1b4db5954892"/>
+					<textElement textAlignment="Center">
+						<font size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[BOLETOS Á PAGAR]]></text>
+				</staticText>
+				<image>
+					<reportElement x="635" y="0" width="167" height="68" uuid="9b1bb0e5-de47-4508-8d42-786c618d78aa"/>
+					<imageExpression><![CDATA["D:\\GOOGLE DRIVE\\ENG. SOFTWARE\\SISTEMAS_PROJETOS\\FinancasCasa\\src\\imagens\\MARCA DIMTECH 250_120.png"]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="68" width="802" height="18" forecolor="#000000" backcolor="#CCCCCC" uuid="e4517c04-c2a9-481b-9c3f-097a32d059d3"/>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="25" backcolor="#FFFFFF" uuid="61ccec83-39e3-40a4-b52f-54f2fbe21d2f"/>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="0" y="1" width="219" height="25" forecolor="#006699" uuid="79102f64-f395-4917-9be3-b8a0b39f20a7"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[EMPRESA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="229" y="1" width="135" height="25" forecolor="#006699" uuid="70362490-4e7c-4948-8368-7ae979143ed0"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SERVIÇO / PRODUTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="373" y="1" width="101" height="25" forecolor="#006699" uuid="b64b9d22-eca9-41d6-bad2-69ac609055cc"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VALOR PAGAR]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="484" y="0" width="93" height="26" forecolor="#006699" uuid="8a7003dc-11d7-4610-827e-03f204312d5a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[VENCIMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="583" y="1" width="69" height="25" forecolor="#006699" uuid="e74e81f2-5eeb-4b4e-a585-897a33c94ed6"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PARCELA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="652" y="1" width="150" height="25" forecolor="#006699" uuid="dc088685-f5a0-45fc-bd1d-1d0fecdb2634"/>
+				<textElement verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FORMA DE PAGTO.]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="802" height="20" backcolor="#CCCCCC" uuid="f15861db-9af2-43b3-bad8-72c765c8ed70"/>
+				<box>
+					<pen lineWidth="0.25"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.5" lineColor="#666666"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="2" y="0" width="217" height="18" uuid="c7f9ac9e-7184-4e46-a0da-1a5bfa5d3f9b"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{boleto_empresaBoleto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="¤ #,##0.00">
+					<reportElement style="Detail" positionType="Float" x="373" y="0" width="101" height="18" uuid="74354f6a-b145-4dbe-b5d6-ec8d2536a914"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{boleto_valorBoleto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+					<reportElement style="Detail" positionType="Float" x="484" y="0" width="93" height="18" uuid="1b410061-51f0-4c3d-a453-9342310b94e2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{boleto_vencimentoBoleto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="583" y="0" width="69" height="18" uuid="b9cb6227-4e36-4f1f-8a7a-09fd040aa971"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{boleto_parcelaBoleto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="652" y="0" width="150" height="18" uuid="09a3c9d7-1aa8-44bf-8724-9b138cf9e39a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{boleto_formaPagamentoBoleto}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="229" y="0" width="135" height="18" uuid="720443a9-c248-4118-b054-4fe906875e3c"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{boleto_produtoBoleto}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20">
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="732" y="0" width="70" height="20" forecolor="#006699" uuid="03940e3a-90d2-4ca3-8b5e-89b9abffee5f"/>
+				<box rightPadding="4">
+					<topPen lineWidth="0.5" lineColor="#666666"/>
+					<leftPen lineWidth="0.5" lineColor="#666666"/>
+					<bottomPen lineWidth="0.5" lineColor="#666666"/>
+					<rightPen lineWidth="0.5" lineColor="#666666"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGARSOMA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="631" y="0" width="101" height="20" uuid="969a2047-16ad-4c61-ae32-1da3b908e1ae"/>
+				<box>
+					<topPen lineWidth="0.5" lineColor="#666666"/>
+					<leftPen lineWidth="0.5" lineColor="#666666"/>
+					<bottomPen lineWidth="0.5" lineColor="#666666"/>
+					<rightPen lineWidth="0.5" lineColor="#666666"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total dos Boletos]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="802" height="24" forecolor="#D0B48E" backcolor="#FFFFFF" uuid="2f830ca1-20c5-4e42-a252-27d4ce2ab31f"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#999999" uuid="cb6d5749-8d31-49b5-8de1-fa6620562c3a"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<textField evaluationTime="Report">
+				<reportElement style="Column header" x="762" y="0" width="40" height="20" forecolor="#999999" uuid="8fe8f96b-3dad-408a-b1e2-ef778020b77b"/>
+				<textElement verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="Column header" x="682" y="0" width="80" height="20" forecolor="#999999" uuid="33a15476-fb5f-4e3b-845d-6a1d894c101e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

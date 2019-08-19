@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="555" pageHeight="802" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="3b6fbecc-fd6d-44e2-b106-a966d80dee13">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="empresaPagadora" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataInicial" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="dataFinal" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     salario.`empresaSalario` AS salario_empresaSalario,
+     salario.`valorSalario` AS salario_valorSalario,
+     salario.`dataRecebimentoSalario` AS salario_dataRecebimentoSalario,
+     salario.`tipoPagamentoSalario` AS salario_tipoPagamentoSalario
+FROM
+     `salario` salario
+WHERE
+	dataRecebimentoSalario LIKE $P{dataInicial}
+ORDER BY
+empresaSalario]]>
+	</queryString>
+	<field name="salario_empresaSalario" class="java.lang.String"/>
+	<field name="salario_valorSalario" class="java.lang.Double"/>
+	<field name="salario_dataRecebimentoSalario" class="java.sql.Date"/>
+	<field name="salario_tipoPagamentoSalario" class="java.lang.String"/>
+	<variable name="SOMA_SALARIO" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{salario_valorSalario}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="75" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="d1624a52-8f91-47bd-81d4-e78f86329b0e"/>
+				<staticText>
+					<reportElement style="Title" x="0" y="0" width="400" height="45" forecolor="#999900" uuid="b460e43d-86f1-4bb5-99d4-1ece1eca79af"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="26" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Controle de Finanças]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" x="2" y="45" width="398" height="29" forecolor="#666666" uuid="900c2b6b-c502-4d36-815f-847aba1f3183"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relatório de Salário]]></text>
+				</staticText>
+				<image>
+					<reportElement x="400" y="0" width="155" height="74" uuid="ebf9e242-7fa2-4aa6-aa0a-61c5d7fb7dd0"/>
+					<imageExpression><![CDATA["D:\\GOOGLE DRIVE\\ENG. SOFTWARE\\SISTEMAS_PROJETOS\\FinancasCasa\\src\\imagens\\logo.png"]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="74" width="555" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="79069e7c-f92f-4de3-95d3-4ea9f0d9dc65"/>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="23" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="23" forecolor="#000000" backcolor="#FFFFFF" uuid="7272e609-33eb-4433-9d95-53ff1edbb594"/>
+			</frame>
+			<staticText>
+				<reportElement style="Column header" x="276" y="0" width="138" height="23" forecolor="#006699" backcolor="#CCCCCC" uuid="4b414471-3071-45e7-b043-5f32dd5fdb25"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Recebimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="414" y="0" width="138" height="23" forecolor="#006699" backcolor="#CCCCCC" uuid="19585e87-85bb-40d0-87b7-a47284bbb545"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo Recebimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="140" y="0" width="138" height="23" forecolor="#006699" backcolor="#CCCCCC" uuid="c42987cd-888f-4435-ab27-52b0c19a781a"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="2" y="0" width="138" height="23" forecolor="#006699" backcolor="#CCCCCC" uuid="63f84033-dfe5-4a05-b197-ce1458e28dd3"/>
+				<textElement verticalAlignment="Middle">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" backcolor="#CCCCCC" uuid="126f008d-80dd-4090-bf69-4a4f7aaf7485"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="140" height="18" uuid="70ea8f16-ff05-4c42-930d-3377fd682dc8"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="0.25" lineColor="#999999"/>
+						<rightPen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salario_empresaSalario}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="¤ #,##0.00">
+					<reportElement style="Detail" positionType="Float" x="140" y="0" width="136" height="18" uuid="8ed09093-7c9d-483c-9bc0-6e3dcc94b68d"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="0.25" lineColor="#999999"/>
+						<rightPen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salario_valorSalario}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy">
+					<reportElement style="Detail" positionType="Float" x="276" y="0" width="138" height="18" uuid="463e75fe-e5a7-4135-9b65-be6d1ce51474"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="0.25" lineColor="#999999"/>
+						<rightPen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salario_dataRecebimentoSalario}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="414" y="0" width="141" height="18" uuid="17df3444-90ca-4193-9a47-77c38ec5b89a"/>
+					<box leftPadding="2" rightPadding="2">
+						<leftPen lineWidth="0.25" lineColor="#999999"/>
+						<rightPen lineWidth="0.25" lineColor="#999999"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{salario_tipoPagamentoSalario}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+		<band height="2"/>
+	</detail>
+	<columnFooter>
+		<band height="20">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="20" forecolor="#000000" backcolor="#CCCCCC" uuid="2d970b9d-dffd-45a7-b6cf-74a2f7d5eea5"/>
+			</frame>
+			<textField pattern="¤ #,##0.00">
+				<reportElement x="470" y="0" width="86" height="20" uuid="df53a6fb-a1c1-443f-9d20-c4889a224ac0"/>
+				<box leftPadding="5" rightPadding="5"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SOMA_SALARIO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="370" y="0" width="100" height="20" uuid="1dbdd034-6395-413f-a5be-975ab73991d9"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Soma Salários]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#FFFFFF" uuid="bed22832-7194-4299-a5de-e87dc48bb165"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="20" forecolor="#666666" uuid="d292b0df-c940-4549-8816-c332f54e82c2"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="20" forecolor="#666666" uuid="c8ac1eaf-2bd5-4073-bcda-a78ec22c2162"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#666666" uuid="885498e4-5a91-4ca7-acf6-88684d15d350"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

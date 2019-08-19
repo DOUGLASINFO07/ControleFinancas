@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="728.0" prefWidth="1152.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladorFXML.FXMLUsuarioController">
+   <children>
+      <HBox alignment="CENTER" layoutX="-9.0" layoutY="667.0" prefHeight="43.0" prefWidth="1030.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="dataLB" prefHeight="43.0" prefWidth="500.0" text="Segunda feira , 05 Novembro 2018">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="horasLB" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="43.0" prefWidth="500.0" text="24:25:00">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="6.0" prefHeight="82.0" prefWidth="1030.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="91.0" fitWidth="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/financascontabilidade.png" />
+               </image>
+            </ImageView>
+            <Label alignment="BOTTOM_CENTER" prefHeight="125.0" prefWidth="301.0" text="CADASTRO DE USÁRIOS" textAlignment="CENTER" textFill="#28a89b">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/MARCA%20DIMTECH%20120_60.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="-4.0" layoutY="157.0" prefHeight="410.0" prefWidth="1152.0" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="157.0">
+         <children>
+            <Pane fx:id="formularioPane" prefHeight="351.0" prefWidth="323.0">
+               <children>
+                  <Button fx:id="novoCadastroBT" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="25.0" layoutY="7.0" mnemonicParsing="false" onKeyPressed="#novoCadastroEnter" onMouseClicked="#novoCadastroMouse" prefHeight="32.0" prefWidth="145.0" text="Novo Usuario" textFill="#535452">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <GridPane alignment="CENTER" layoutX="29.0" layoutY="32.0" prefHeight="363.0" prefWidth="282.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="31.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="251.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="37.0" minHeight="0.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="33.0" prefWidth="59.0" text="Nome" textAlignment="RIGHT" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="38.0" prefWidth="79.0" text="Celular" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="49.0" prefWidth="74.0" text="E-mail" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="BOTTOM" prefHeight="57.0" prefWidth="75.0" text="Login" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="59.0" prefWidth="75.0" text="Senha" textFill="#545353" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                           <padding>
+                              <Insets right="4.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomeUsuarioTF" prefHeight="25.0" prefWidth="240.0" promptText="Nome e sobrenome" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="celularUsuarioTF" maxWidth="-Infinity" prefHeight="30.0" prefWidth="147.0" promptText="DDD + 9 Números" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="emailUsuarioTF" promptText="Seu email principal" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="loginUsuarioTF" maxWidth="-Infinity" prefHeight="30.0" prefWidth="129.0" promptText="Nome de login" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <TextField fx:id="senhaUsuarioTF" maxWidth="-Infinity" onKeyPressed="#senhaFocusTeclaTab" prefHeight="30.0" prefWidth="129.0" promptText="Max. 6 caracteres" GridPane.columnIndex="1" GridPane.rowIndex="10">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                           <image>
+                              <Image url="@../imagens/telefone.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="10">
+                           <image>
+                              <Image url="@../imagens/senha.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="8">
+                           <image>
+                              <Image url="@../imagens/login.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                           <image>
+                              <Image url="@../imagens/email.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                           <image>
+                              <Image url="@../imagens/usuario.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </GridPane>
+                  <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="62.0" layoutX="133.0" layoutY="8.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/icons8_Add_User_Male_48px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="351.0" prefWidth="118.0">
+               <children>
+                  <ImageView fx:id="fotoUsuarioIV" fitHeight="136.0" fitWidth="100.0" layoutX="12.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../imagens/semFoto.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buscarFotoBT" alignment="BASELINE_LEFT" layoutX="9.0" layoutY="147.0" mnemonicParsing="false" onKeyPressed="#selecionaFotoEnter" onMouseClicked="#selecionaFotoMouse" prefHeight="25.0" prefWidth="108.0" text="escolher imagem">
+                     <font>
+                        <Font name="System Bold" size="10.0" />
+                     </font>
+                  </Button>
+                  <ImageView blendMode="MULTIPLY" fitHeight="20.0" fitWidth="20.0" layoutX="99.0" layoutY="150.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/adicionar.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="deletarBT" alignment="BOTTOM_LEFT" layoutX="8.0" layoutY="363.0" mnemonicParsing="false" onKeyPressed="#excluirEnter" onMouseClicked="#excluirMouse" prefHeight="30.0" prefWidth="108.0" text="Excluir" textFill="#4a4949">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="62.0" layoutX="79.0" layoutY="363.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/excluir.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="atualizarBT" alignment="BOTTOM_LEFT" layoutX="8.0" layoutY="325.0" mnemonicParsing="false" onKeyPressed="#atualizarEnter" onMouseClicked="#atualizarMouse" prefHeight="30.0" prefWidth="108.0" styleClass="inserir" text="Atualizar" textFill="#4a4949">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="62.0" layoutX="79.0" layoutY="325.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/atualizar.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="salvarBT" alignment="BOTTOM_LEFT" layoutX="7.0" layoutY="285.0" mnemonicParsing="false" onKeyPressed="#salvarEnter" onMouseClicked="#salvarMouse" prefHeight="30.0" prefWidth="108.0" text="Salvar">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="62.0" layoutX="79.0" layoutY="285.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/icons8_Ok_48px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="351.0" prefWidth="678.0">
+               <children>
+                  <Button fx:id="listarTabelaBT" alignment="TOP_LEFT" layoutX="421.0" layoutY="2.0" mnemonicParsing="false" onKeyPressed="#listarTabelaEnter" onMouseClicked="#listarTabelaMouse" prefHeight="30.0" prefWidth="94.0" text="Listar" textFill="#535452">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <TableView fx:id="tabelaUsuario" layoutX="10.0" layoutY="39.0" onKeyPressed="#pegarDadoTabelaEnter" onMouseClicked="#pegarDadoTabelaMouse" prefHeight="355.0" prefWidth="634.0">
+                     <columns>
+                        <TableColumn fx:id="colunaNome" prefWidth="161.0" text="Usuário" />
+                        <TableColumn fx:id="colunaTelefone" prefWidth="109.0" text="Telefone" />
+                        <TableColumn fx:id="colunaEmail" prefWidth="180.0" text="E-mail" />
+                        <TableColumn fx:id="colunaLogin" prefWidth="106.0" text="login" />
+                        <TableColumn fx:id="colunaSenha" prefWidth="97.0" text="senha" />
+                     </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutX="10.0" layoutY="5.0" prefHeight="27.0" prefWidth="399.0" text="USUÁRIOS CADASTRADOS" textFill="#727070">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="imprimirBT" alignment="BOTTOM_LEFT" layoutX="528.0" layoutY="1.0" mnemonicParsing="false" onKeyPressed="#imprimirEnter" onMouseClicked="#imprimirMouse" prefHeight="30.0" prefWidth="116.0" text="Imprimir" textFill="#4a4949">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="62.0" layoutX="614.0" layoutY="1.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/icons8_PDF_48px.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView blendMode="MULTIPLY" fitHeight="30.0" fitWidth="52.0" layoutX="485.0" layoutY="1.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/lista.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="-10.0" layoutY="109.0" prefHeight="33.0" prefWidth="812.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" layoutY="599.0" prefHeight="39.0" prefWidth="1030.0" style="-fx-background-color: white;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Pane prefHeight="27.0" prefWidth="130.0">
+               <children>
+                  <Button fx:id="botaoVoltarMenu" alignment="BASELINE_LEFT" layoutY="3.0" mnemonicParsing="false" onKeyPressed="#abrirMenuEnter" onMouseClicked="#abrirMenuMouse" prefHeight="25.0" prefWidth="127.0" text="Voltar menu" textFill="#4a4949">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <ImageView blendMode="MULTIPLY" fitHeight="33.0" fitWidth="30.0" layoutX="97.0" layoutY="2.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" smooth="false">
+                     <image>
+                        <Image url="@../imagens/voltar.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+      <HBox layoutX="-5.0" layoutY="567.0" prefHeight="27.0" prefWidth="812.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox layoutX="1.0" layoutY="642.0" prefHeight="29.0" prefWidth="1030.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox layoutX="8.0" layoutY="713.0" prefHeight="15.0" prefWidth="1030.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="16.0" prefHeight="82.0" prefWidth="1030.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label alignment="TOP_LEFT" prefHeight="92.0" prefWidth="336.0" text="CONTROLE DE FINANÇAS" textAlignment="CENTER" textFill="#26aeac">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

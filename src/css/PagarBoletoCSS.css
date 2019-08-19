@@ -1,0 +1,16 @@
+
+
+.Button{
+    /*-fx-background-image: "src/imagens/salvar.png";*/
+        -fx-font: "Times new Roman" , Georgia, Serif;
+            /*-fx-background-image: url ("imagens/salvar.PNG");*/
+            
+             -fx-background-image: url("../imagens/teste.png");
+     -fx-pref-height: 100px;
+     -fx-pref-width: 100px;
+            
+}
+
+.TextField{
+    
+}
